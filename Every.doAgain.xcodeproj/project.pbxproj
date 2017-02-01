@@ -15,6 +15,7 @@
 		C84A2FF41E423E3500B71500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84A2FF21E423E3500B71500 /* Main.storyboard */; };
 		C84A2FF61E423E3500B71500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84A2FF51E423E3500B71500 /* Assets.xcassets */; };
 		C84A2FF91E423E3500B71500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84A2FF71E423E3500B71500 /* LaunchScreen.storyboard */; };
+		C84A300E1E424B6800B71500 /* AddNewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C84A300D1E424B6800B71500 /* AddNewTodoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,12 @@
 		C84A2FF51E423E3500B71500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C84A2FF81E423E3500B71500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C84A2FFA1E423E3500B71500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C84A30061E42465F00B71500 /* Todo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Todo+CoreDataClass.h"; sourceTree = "<group>"; };
+		C84A30071E42465F00B71500 /* Todo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Todo+CoreDataClass.m"; sourceTree = "<group>"; };
+		C84A30081E42465F00B71500 /* Todo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Todo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C84A30091E42465F00B71500 /* Todo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Todo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C84A300C1E424B6800B71500 /* AddNewTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTodoViewController.h; sourceTree = "<group>"; };
+		C84A300D1E424B6800B71500 /* AddNewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTodoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,10 @@
 		C84A2FD71E423E3500B71500 = {
 			isa = PBXGroup;
 			children = (
+				C84A30061E42465F00B71500 /* Todo+CoreDataClass.h */,
+				C84A30071E42465F00B71500 /* Todo+CoreDataClass.m */,
+				C84A30081E42465F00B71500 /* Todo+CoreDataProperties.h */,
+				C84A30091E42465F00B71500 /* Todo+CoreDataProperties.m */,
 				C84A2FE21E423E3500B71500 /* Every.doAgain */,
 				C84A2FE11E423E3500B71500 /* Products */,
 			);
@@ -67,14 +78,16 @@
 				C84A2FE71E423E3500B71500 /* AppDelegate.m */,
 				C84A2FEC1E423E3500B71500 /* MasterViewController.h */,
 				C84A2FED1E423E3500B71500 /* MasterViewController.m */,
+				C84A300C1E424B6800B71500 /* AddNewTodoViewController.h */,
+				C84A300D1E424B6800B71500 /* AddNewTodoViewController.m */,
 				C84A2FEF1E423E3500B71500 /* DetailViewController.h */,
 				C84A2FF01E423E3500B71500 /* DetailViewController.m */,
 				C84A2FF21E423E3500B71500 /* Main.storyboard */,
+				C84A2FE31E423E3500B71500 /* Supporting Files */,
 				C84A2FF51E423E3500B71500 /* Assets.xcassets */,
 				C84A2FF71E423E3500B71500 /* LaunchScreen.storyboard */,
 				C84A2FFA1E423E3500B71500 /* Info.plist */,
 				C84A2FE91E423E3500B71500 /* Every_doAgain.xcdatamodeld */,
-				C84A2FE31E423E3500B71500 /* Supporting Files */,
 			);
 			path = Every.doAgain;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 				C84A2FF11E423E3500B71500 /* DetailViewController.m in Sources */,
 				C84A2FEE1E423E3500B71500 /* MasterViewController.m in Sources */,
 				C84A2FEB1E423E3500B71500 /* Every_doAgain.xcdatamodeld in Sources */,
+				C84A300E1E424B6800B71500 /* AddNewTodoViewController.m in Sources */,
 				C84A2FE81E423E3500B71500 /* AppDelegate.m in Sources */,
 				C84A2FE51E423E3500B71500 /* main.m in Sources */,
 			);

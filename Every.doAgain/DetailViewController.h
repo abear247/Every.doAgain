@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Every_doAgain+CoreDataModel.h"
+#import "Todo+CoreDataClass.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) Event *detailItem;
+@property (strong, nonatomic) Todo *detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end
