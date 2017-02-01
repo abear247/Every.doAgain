@@ -54,7 +54,13 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="sJp-HB-144">
+                            <connections>
+                                <segue destination="oNq-WH-IFO" kind="presentation" identifier="EditView" id="tT5-Ku-4yy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                     </connections>
@@ -240,6 +246,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="Eq4-Ua-uIi" id="kTv-O0-ogk"/>
                         <outlet property="priorityLabel" destination="bLq-62-7gJ" id="xFy-ow-Upr"/>
+                        <outlet property="stepper" destination="clz-Cf-0xP" id="u1h-gW-4SJ"/>
                         <outlet property="titleTextField" destination="bUd-Hq-f7T" id="fFc-6P-pvq"/>
                     </connections>
                 </viewController>
@@ -266,5 +273,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6S0-TO-JiA"/>
+        <segue reference="tT5-Ku-4yy"/>
     </inferredMetricsTieBreakers>
 </document>

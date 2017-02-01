@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *priorityLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
 
 
 @end
@@ -20,7 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.todo.priorityNumber = 0;
+    self.stepper.value = self.todo.priorityNumber;
+    self.priorityLabel.text = [NSString stringWithFormat:@"%D",self.todo.priorityNumber];
+    self.titleTextField.text = self.todo.title;
+    self.descriptionTextView.text = self.todo.todoDescription;
     // Do any additional setup after loading the view.
 }
 - (IBAction)priorityStepper:(id)sender {

@@ -58,9 +58,18 @@
         Todo *newTodo = [[Todo alloc] initWithContext:self.context];
         avc.todo = newTodo;
         avc.addNewTodo = ^(Todo *todo){
-            [self.tableView reloadData];
+            NSError *error = nil;
+            if (![self.context save:&error]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                abort();
+            }
+           [self.tableView reloadData];
+            
         };
     }
+   
 }
 
 
@@ -126,7 +135,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
 
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     

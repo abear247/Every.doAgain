@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "AddNewTodoViewController.h"
 
 @interface DetailViewController ()
 
@@ -17,7 +18,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = self.detailItem.timestamp.description;
+        self.detailDescriptionLabel.text = self.detailItem.todoDescription;
     }
 }
 
@@ -32,6 +33,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"EditView"]){
+        AddNewTodoViewController *avc = (AddNewTodoViewController *)[segue destinationViewController];
+        avc.todo = self.detailItem;
+        avc.addNewTodo = ^(Todo *todo){
+            self.detailDescriptionLabel.text = self.detailItem.todoDescription;
+        };
+    }
 }
 
 
